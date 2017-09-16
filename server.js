@@ -64,10 +64,10 @@ conn.sync({ force: true })
     })
   })
 
-app.use('/dist', express.static(path.join(__dirname, 'dist')))
+app.use('/build', express.static(path.join(__dirname, 'build')))
 app.use('/vendor', express.static(path.join(__dirname, 'node_modules')))
 
-// app.get('/', (req, res, next) => res.sendFile(path.join(__dirname, '/public/index.html')))
+app.get('/', (req, res, next) => res.sendFile(path.join(__dirname, '/build/index.html')))
 
 app.get('/api/products', (req, res, next) => {
   Product.findAll({
