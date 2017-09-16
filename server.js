@@ -64,7 +64,7 @@ conn.sync({ force: true })
     })
   })
 
-app.use('/build', express.static(path.join(__dirname, 'build')))
+app.use('/static', express.static(path.join(__dirname, 'build/static')))
 app.use('/vendor', express.static(path.join(__dirname, 'node_modules')))
 
 app.get('/', (req, res, next) => res.sendFile(path.join(__dirname, '/build/index.html')))
