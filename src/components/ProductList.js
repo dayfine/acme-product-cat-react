@@ -4,7 +4,6 @@ import ProductForm from './ProductForm'
 export default class ProductList extends Component {
   render () {
     const {products, categories, Handlers} = this.props
-    console.log(products)
 
     return (
       <div className='row'>

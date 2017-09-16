@@ -40,9 +40,7 @@ export default class App extends Component {
   }
 
   UpdateProduct (state) {
-    console.log(state)
     const id = state.id
-    delete state.id
     axios.put(`/api/products/${id}`, state)
       .then(res => res.data)
       .then(product => {
@@ -57,8 +55,6 @@ export default class App extends Component {
   }
 
   AddProduct (state) {
-    delete state.id
-    console.log(state)
     axios.post(`/api/products/`, state)
       .then(res => res.data)
       .then(product => {

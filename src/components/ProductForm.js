@@ -28,19 +28,6 @@ export default class ProductForm extends Component {
     })
   }
 
-  // componentWillReceiveProps (props) {
-  //   if (!this.props.product) return
-  //   const product = this.props.product
-
-  //   this.setState({
-  //     id: product.id,
-  //     name: product.name,
-  //     price: product.price,
-  //     inStock: product.inStock,
-  //     categoryId: product.categoryId
-  //   })
-  // }
-
   HandleClick (event) {
     const h = this.props.Handlers
     switch (event.target.name) {
